@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="robots" content=""></meta>
         <meta name="revisit-after" content="1 day"></meta>
         <meta name="language" content="Portuguese"></meta>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"></meta>
         <meta property="og:title" content="Lais Frigério - Software Developer"></meta>
         <meta property="og:description" content="Olá, meu nome é Lais e sou formada em Análise e Desenvolvimento de Sistemas pela UFPR com MELHOR índice de desempenho acadêmico. Atualmente estou cursando minha primeira Especialização em Engenharia de Software pela mesma instituição. Venha conhecer mais sobre mim em meu site 💜"></meta>
         <meta property="og:url" content="https://blog.laisfrigerio.com.br/"></meta>
