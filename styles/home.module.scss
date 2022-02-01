@@ -1,0 +1,12 @@
+.wrapper {
+  @extend %flex;
+  @extend %justify-content-center;
+  margin: 0 auto;
+  max-width: $wrapper;
+
+  h1 {
+    color: $secondary;
+    font-size: 32px;
+    margin: 70px 0;
+  }
+}
