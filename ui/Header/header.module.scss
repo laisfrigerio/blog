@@ -16,6 +16,55 @@
   height: inherit;
   padding: 0 2rem;
 
+  nav {
+    height: inherit;
+    margin-left: 5rem;
+  
+    a {
+      color: $gray-300;
+      display: inline-block;
+      height: inherit;
+      line-height: 5rem;
+      padding: 0 0.5rem;
+      position: relative;
+      text-decoration: none;
+      transition: color 0.2s;
+  
+      & + a {
+        margin-left: 2rem;
+      }
+  
+      &:hover {
+        color: $white;
+      }
+
+      &.active {
+        color: $green-500;
+        font-weight: bold;
+        &:after {
+          background-color: $green-500;
+          border-radius: 3px 3px 0 0;
+          bottom: 1px;
+          content: '';
+          height: 3px;
+          left: 0;
+          position: absolute;
+          width: 100%;
+        }
+      }
+    }
+  
+    @media #{$media-max487} {
+      margin-left: 2.5rem;
+  
+      a {
+        & + a {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
   @media #{$media-max487} {
     padding: 0 1rem;
 
@@ -32,55 +81,6 @@
         &:first-child {
           margin-right: 0;
         }
-      }
-    }
-  }
-}
-
-.navActive {
-  color: $green-500;
-  font-weight: bold;
-  &:after {
-    background-color: $green-500;
-    border-radius: 3px 3px 0 0;
-    bottom: 1px;
-    content: '';
-    height: 3px;
-    left: 0;
-    position: absolute;
-    width: 100%;
-  }
-}
-
-.nav {
-  height: inherit;
-  margin-left: 5rem;
-
-  a {
-    color: $gray-300;
-    display: inline-block;
-    height: inherit;
-    line-height: 5rem;
-    padding: 0 0.5rem;
-    position: relative;
-    text-decoration: none;
-    transition: color 0.2s;
-
-    & + a {
-      margin-left: 2rem;
-    }
-
-    &:hover {
-      color: $white;
-    }
-  }
-
-  @media #{$media-max487} {
-    margin-left: 2.5rem;
-
-    a {
-      & + a {
-        margin-left: 1rem;
       }
     }
   }

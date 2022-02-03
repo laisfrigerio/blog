@@ -8,7 +8,7 @@ function Header () {
                 <Glassses className={styles.icoGlasses} />
                 <nav className={styles.nav}>
                     <a href="/">Home</a>
-                    <a className={styles.navActive} href="/">Posts</a>
+                    <a className={styles.active} href="/">Posts</a>
                     <a href="/">About</a>
                 </nav>
             </div>
