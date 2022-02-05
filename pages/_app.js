@@ -1,14 +1,14 @@
 import Head from 'next/head'
-import { Footer } from '../ui/Footer'
-import { Header } from '../ui/Header'
-import '../styles/reset.scss'
+import { GlobalStyle } from '../src/styles/global'
+import { Footer } from '../src/ui/Footer'
+import { Header } from '../src/ui/Header'
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
         <title>Blog | Lais Frigério</title>
-        <meta charset="utf-8"></meta>
+        <meta charSet="utf-8"></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <meta name="author" content="Lais Frigério"></meta>
         <meta name="description" content="Software Developer"></meta>
@@ -30,6 +30,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Header />
       <main>
+        <GlobalStyle />
         <Component {...pageProps} />
       </main>
       <Footer />
