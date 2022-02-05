@@ -5,7 +5,7 @@ const { primary } = theme.colors
 const { montserrat } = theme.fontFamily
 
 const GlobalStyle = createGlobalStyle`
-  body, main, nav, header, article, section, ul, li, a, input, aside, figure, button, table, thead, tbody, td, th, tr, div, span, h1, h2, h3, h4,  h5, h6 {
+  body, main, nav, header, article, section, p, ul, li, a, input, aside, figure, button, table, thead, tbody, td, th, tr, div, span, h1, h2, h3, h4,  h5, h6 {
     border: none;
     box-sizing: border-box;
     font-family: ${montserrat};

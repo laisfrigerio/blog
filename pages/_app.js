@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { GlobalStyle } from '../src/styles/global'
 import { Footer } from '../src/ui/Footer'
-import { Header } from '../src/ui/Header'
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -25,10 +24,9 @@ function MyApp({ Component, pageProps }) {
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-        <link rel="shortcut icon" href="images/favicon-green.ico" />
+        <link rel="shortcut icon" href="/favicon-green.ico" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
       </Head>
-      <Header />
       <main>
         <GlobalStyle />
         <Component {...pageProps} />

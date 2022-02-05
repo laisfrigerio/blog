@@ -27,7 +27,7 @@ export default {
   fontFamily: {
     montserrat: "'Montserrat', sans-serif",
     firaCode: "'Fira Code', monospace",
-    Roboto: "'Roboto', sans-serif",
+    roboto: "'Roboto', sans-serif",
   },
   breakPoints: {
     mediaMax992: 'screen and (max-width: 992px)',
