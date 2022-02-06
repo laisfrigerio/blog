@@ -1,3 +1,4 @@
+import { Link } from '../../src/components/Link'
 import { PageTitle } from '../../src/components/PageTitle'
 import { ListItem, PostSubtitle, PostTile } from '../../src/components/Posts'
 import { Wrapper } from '../../src/components/Wrapper'
@@ -12,12 +13,14 @@ export default function PostsPage({ posts }) {
       <Wrapper>
         <ul>
           {posts.map((post) => (
-            <ListItem key={post.slug}>
-              <a href={post.slug}>
-                <PostTile className='title'>{post.title}</PostTile>
-                <PostSubtitle className='subtitle'>{post.excerpt}</PostSubtitle>
-              </a>
-            </ListItem>
+            <Link href={post.slug} passHref>
+              <ListItem key={post.slug}>
+                <a>
+                  <PostTile className='title'>{post.title}</PostTile>
+                  <PostSubtitle className='subtitle'>{post.excerpt}</PostSubtitle>
+                </a>
+              </ListItem>
+            </Link>
           ))}
         </ul>
       </Wrapper>
