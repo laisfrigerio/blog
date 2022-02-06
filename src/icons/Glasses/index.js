@@ -1,6 +1,6 @@
 function IconGlassses({ className = '' }) {
   return (
-    <svg className={className} version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 66.336 66.336">
+    <svg style={{ height: '40px', width: '40px' }} className={className} version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 66.336 66.336">
       <g>
         <path style={{ fill: "#1d887a" }} d="M64.091,25.757h-3.963c-2.316-3-6.207-5.616-10.611-5.616c-4.402,0-8.293,2.616-10.609,5.616H28.321
             c-2.315-3-6.206-5.616-10.608-5.616c-4.405,0-8.295,2.616-10.612,5.616H2.244c-1.24,0-2.244,1.261-2.244,2.5s1.004,2.5,2.244,2.5

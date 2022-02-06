@@ -16,9 +16,9 @@ function Header({ active = 'home' }) {
                         <NavLink className={active === 'posts' ? 'active' : ''}>Posts</NavLink>
                     </Link>
 
-                    <Link href='/' passHref>
+                    {/* <Link href='/' passHref>
                         <NavLink className={active === 'about' ? 'active' : ''}>Sobre</NavLink>
-                    </Link>
+                    </Link> */}
                 </Nav>
             </WrapperHeader>
         </Wrapper>

@@ -20,7 +20,7 @@ const Wrapper = styled.header`
     width: 40px;
 
     @media ${breakPoints.mediaMax487} {
-      width: 50px;
+      width: 50px !important;
     }
   }
 `
