@@ -20,7 +20,7 @@ export default function PostPage({ post }) {
   )
 }
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
   const posts = getAllPosts(['slug'])
 
   return {
@@ -31,11 +31,11 @@ export function getStaticPaths() {
         }
       }
     }),
-    fallback: true // false or 'blocking'
+    fallback: false // false or 'blocking'
   };
 }
 
-export function getStaticProps({ params }) {
+export async function getStaticProps({ params }) {
   return {
     props: {
       post: getPost(`${params.slug}.md`, ['slug', 'title', 'excerpt', 'content'])

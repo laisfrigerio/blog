@@ -1,5 +1,6 @@
-import PostsScreen from '../../src/screens/PostsScreen'
 import { PageTitle } from '../../src/components/PageTitle'
+import { ListItem, PostSubtitle, PostTile } from '../../src/components/Posts'
+import { Wrapper } from '../../src/components/Wrapper'
 import { Header } from '../../src/ui/Header'
 import { getAllPosts } from '../../src/utils/getPosts'
 
@@ -8,9 +9,24 @@ export default function PostsPage({ posts }) {
     <>
       <PageTitle>Últimos Posts | Lais Frigério</PageTitle>
       <Header active='posts' />
-      <PostsScreen posts={posts} />
+      <Wrapper>
+        <ul>
+          {posts.map((post) => (
+            <ListItem key={post.slug}>
+              <a href={post.slug}>
+                <PostTile className='title'>{post.title}</PostTile>
+                <PostSubtitle className='subtitle'>{post.excerpt}</PostSubtitle>
+              </a>
+            </ListItem>
+          ))}
+        </ul>
+      </Wrapper>
     </>
   )
+}
+
+PostsPage.defaultProps = {
+  posts: []
 }
 
 export function getStaticProps() {
