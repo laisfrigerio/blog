@@ -13,8 +13,8 @@ export default function PostsPage({ posts }) {
       <Wrapper>
         <ul>
           {posts.map((post) => (
-            <Link href={post.slug} passHref>
-              <ListItem key={post.slug}>
+            <Link key={post.slug} href={post.slug} passHref>
+              <ListItem>
                 <a>
                   <PostTile className='title'>{post.title}</PostTile>
                   <PostSubtitle className='subtitle'>{post.excerpt}</PostSubtitle>
