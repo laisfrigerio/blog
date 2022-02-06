@@ -1,7 +1,7 @@
 import HomeScreen from '../src/screens/HomeScreen'
 
-export default function Home() {
+export default function HomePage({ posts }) {
   return (
-    <HomeScreen />
+    <HomeScreen posts={posts} />
   )
 }

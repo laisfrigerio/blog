@@ -5,6 +5,7 @@ import { Footer } from '../src/ui/Footer'
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <GlobalStyle />
       <Head>
         <title>Blog | Lais Frigério</title>
         <meta charSet="utf-8"></meta>
@@ -28,7 +29,6 @@ function MyApp({ Component, pageProps }) {
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
       </Head>
       <main>
-        <GlobalStyle />
         <Component {...pageProps} />
       </main>
       <Footer />
