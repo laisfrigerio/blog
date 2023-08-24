@@ -8,12 +8,12 @@ function Header({ active = 'home' }) {
             <WrapperHeader>
                 <IconGlassses className='ico-glass-header' />
                 <Nav>
-                    <Link href='/' passHref>
-                        <NavLink className={active === 'home' ? 'active' : ''}>Início</NavLink>
+                    <Link href='/' className={active === 'home' ? 'active' : ''}>
+                        Início
                     </Link>
 
-                    <Link href='/posts' passHref>
-                        <NavLink className={active === 'posts' ? 'active' : ''}>Posts</NavLink>
+                    <Link href='/posts' className={active === 'posts' ? 'active' : ''}>
+                        Posts
                     </Link>
 
                     {/* <Link href='/' passHref>
