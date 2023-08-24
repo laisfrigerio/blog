@@ -7,7 +7,7 @@ import { getPost, getAllPosts } from '../../src/utils/getPosts'
 export default function PostPage({ post }) {
   return (
     <>
-      <PageTitle>{post.title} | Blog Lais Frigério</PageTitle>
+      <PageTitle>{`${post.title} | Blog Lais Frigério`}</PageTitle>
       <Header active='posts' />
       <Wrapper>
         <Post>

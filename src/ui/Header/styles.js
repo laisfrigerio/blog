@@ -32,6 +32,46 @@ const Nav = styled.nav`
   @media ${breakPoints.mediaMax487} {
     margin-left: 2.5rem;
   }
+
+  a {
+    color: ${gray300};
+    display: inline-block;
+    height: inherit;
+    line-height: 5rem;
+    padding: 0 0.5rem;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    & + a {
+      margin-left: 2rem;
+    }
+
+    &:hover {
+      color: ${white};
+    }
+
+    &.active {
+      color: ${green500};
+      font-weight: bold;
+      &:after {
+        background-color: ${green500};
+        border-radius: 3px 3px 0 0;
+        bottom: 1px;
+        content: '';
+        height: 3px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+
+    @media ${breakPoints.mediaMax487} {
+      & + a {
+        margin-left: 1rem;
+      }
+    }
+  }
 `
 
 const NavLink = styled.a`
