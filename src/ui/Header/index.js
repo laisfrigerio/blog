@@ -2,23 +2,19 @@ import { Link } from '../../components/Link'
 import { IconGlassses } from '../../icons/Glasses'
 import { Nav, NavLink, Wrapper, WrapperHeader } from './styles'
 
-function Header({ active = 'home' }) {
+function Header({ active = 'home', ...props }) {
     return (
-        <Wrapper>
+        <Wrapper { ...props }>
             <WrapperHeader>
                 <IconGlassses className='ico-glass-header' />
                 <Nav>
-                    <Link href='/' className={active === 'home' ? 'active' : ''}>
+                    <Link data-testid='header-link-home' href='/' className={active === 'home' ? 'active' : ''}>
                         Início
                     </Link>
 
-                    <Link href='/posts' className={active === 'posts' ? 'active' : ''}>
+                    <Link data-testid='header-link-posts' href='/posts' className={active === 'posts' ? 'active' : ''}>
                         Posts
                     </Link>
-
-                    {/* <Link href='/' passHref>
-                        <NavLink className={active === 'about' ? 'active' : ''}>Sobre</NavLink>
-                    </Link> */}
                 </Nav>
             </WrapperHeader>
         </Wrapper>

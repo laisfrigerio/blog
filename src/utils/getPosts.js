@@ -1,29 +1,40 @@
-import { remark } from 'remark'
 import fs from 'fs'
 import grayMatter from 'gray-matter'
-import remarkHTML from 'remark-html'
+import { marked } from 'marked'
+
+function sorterDesc (postA, postB) {
+  const dateA = new Date(postA.date)
+  const dateB = new Date(postB.date)
+  return dateB - dateA
+}
 
 function getPost(filename, fields) {
-  const fileContent = fs.readFileSync(`./_posts/${filename}`, 'utf-8')
-  const { content, data: metadata } = grayMatter(fileContent)
-  const htmLContent = remark()
-    .use(remarkHTML)
-    .processSync(content)
-    .toString()
+  try {
+    const fileContent = fs.readFileSync(`./_posts/${filename}`, 'utf-8')
 
-  const data = {
-    ...metadata,
-    slug: filename.replace('.md', ''),
-    content: htmLContent
+    if (!fileContent) {
+      throw new Error('File not found')
+    }
+
+    const { content, data: metadata } = grayMatter(fileContent)
+    const htmLContent = marked.parse(content)
+
+    const data = {
+      ...metadata,
+      slug: filename.replace('.md', ''),
+      content: htmLContent
+    }
+
+    const response = {}
+
+    fields.forEach((field) => {
+      response[field] = data[field]
+    })
+
+    return response
+  } catch (error) {
+    throw error
   }
-
-  const response = {}
-
-  fields.forEach((field) => {
-    response[field] = data[field]
-  })
-
-  return response
 }
 
 function getAllPosts(fields = []) {
@@ -37,7 +48,7 @@ function getAllPosts(fields = []) {
     return getPost(filename, fields)
   })
 
-  return posts
+  return posts.sort(sorterDesc)
 }
 
 export { getAllPosts, getPost }

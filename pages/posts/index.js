@@ -9,14 +9,30 @@ export default function PostsPage({ posts }) {
   return (
     <>
       <PageTitle>Últimos Posts | Lais Frigério</PageTitle>
-      <Header active='posts' />
+      <Header data-testid='post-header' active='posts' />
       <Wrapper>
         <ul>
           {posts.map((post) => (
-            <ListItem key={post.slug}>
-              <Link href={`/posts/${post.slug}`}>
-                <PostTile className='title'>{post.title}</PostTile>
-               <PostSubtitle className='subtitle'>{post.excerpt}</PostSubtitle>
+            <ListItem
+              data-testid='post-list-item'
+              key={post.slug}
+            >
+              <Link
+                data-testid={`post-list-item-link-${post.slug}`}
+                href={`/posts/${post.slug}`}
+              >
+                <PostTile
+                  data-testid={`post-list-item-post-title-${post.slug}`}
+                  className='title'
+                >
+                  {post.title}
+                </PostTile>
+                <PostSubtitle
+                  data-testid={`post-list-item-post-sub-title-${post.slug}`}
+                  className='subtitle'
+                >
+                  {post.excerpt}
+                </PostSubtitle>
               </Link>
             </ListItem>
           ))}
@@ -33,7 +49,7 @@ PostsPage.defaultProps = {
 export function getStaticProps() {
   return {
     props: {
-      posts: getAllPosts(['slug', 'title', 'excerpt'])
+      posts: getAllPosts(['slug', 'title', 'excerpt', 'date'])
     }
   }
 }
