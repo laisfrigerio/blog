@@ -44,3 +44,4 @@ describe('getting all posts', () => {
     expect(posts[0].date).toBeUndefined();
   })
 })
+ 
