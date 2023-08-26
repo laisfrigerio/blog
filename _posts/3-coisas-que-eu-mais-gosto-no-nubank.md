@@ -1,7 +1,7 @@
 ---
 
 title: '3 coisas que eu mais gosto no Nubank'
-date: '2022-01-14'
+date: '2022-01-14 09:00:00'
 excerpt: 'No próximo domingo, (16/01/2022), eu completo 2 meses de Nubank. E gostaria de compartilhar um balanço positivo deste período com as 3 coisas que mais gosto por aqui:'
 
 ---
