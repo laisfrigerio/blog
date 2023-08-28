@@ -28,7 +28,9 @@ function getPost(filename, fields) {
     const response = {}
 
     fields.forEach((field) => {
-      response[field] = data[field]
+      if (data[field]) {
+        response[field] = data[field]
+      }
     })
 
     return response

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import theme from '../../styles/theme'
 
-const { green500, white } = theme.colors
+const { purple500, white } = theme.colors
 
 const Wrapper = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
     width: 30px;
 
     path {
-      fill: ${green500};
+      fill: ${purple500};
       transition: fill 0.2s;
     }
 

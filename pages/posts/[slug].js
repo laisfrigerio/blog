@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { PageTitle } from '../../src/components/PageTitle'
 import { Post, PostContent, PostTile, PostSubtitle } from '../../src/components/Posts'
 import { Wrapper } from '../../src/components/Wrapper'
@@ -13,6 +14,13 @@ export default function PostPage({ post }) {
         <Post>
           <PostTile className='title'>{post.title}</PostTile>
           <PostSubtitle className='subtitle'>{post.excerpt}</PostSubtitle>
+          {post.cover && <Image
+            src={`/images/${post.cover}`}
+            width={800}
+            height={400}
+            alt="Banner of the post"
+            priority
+          />}
           <PostContent dangerouslySetInnerHTML={{ __html: post.content }} />
         </Post>
       </Wrapper>
@@ -38,7 +46,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   return {
     props: {
-      post: getPost(`${params.slug}.md`, ['slug', 'title', 'excerpt', 'content'])
+      post: getPost(`${params.slug}.md`, ['slug', 'title', 'excerpt', 'content', 'cover'])
     }
   }
 }

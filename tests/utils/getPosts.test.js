@@ -1,6 +1,8 @@
 import fs from 'fs'
 import { getAllPosts } from '../../src/utils/getPosts'
-import { date, excerpt,fileContent, filename, slug, title } from './commonMocks'
+import { HowToCreateAReactApp } from './commonMocks'
+
+const { date, excerpt, content, filename, slug, title } = HowToCreateAReactApp
 
 jest.mock('fs')
 
@@ -13,7 +15,7 @@ describe('getting all posts', () => {
 
   beforeEach(() => {
     fs.readdirSync.mockReturnValue([filename])
-    fs.readFileSync.mockReturnValue(fileContent)
+    fs.readFileSync.mockReturnValue(content)
   })
 
   afterEach(() => {
