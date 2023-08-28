@@ -17,8 +17,6 @@ export default function PostPage({ post }) {
           {post.cover && <PostImage>
               <Image
                 src={`/images/${post.cover}`}
-                // width={"100%"}
-                // height={"auto"}
                 alt="Banner of the post"
                 fill
                 priority
