@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import theme from '../../styles/theme'
 
 const { fontFamily, wrapper } = theme
-const { gray350, green500 } = theme.colors
+const { gray350, purple500 } = theme.colors
 
 const Wrapper = styled.div`
   align-items: center;
@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   padding: 2rem 2rem 1rem;
 
   h1 {
-    color: ${green500};
+    color: ${purple500};
     font-family: ${fontFamily.firaCode};
     font-size: 18px;
     margin-bottom: 2rem;

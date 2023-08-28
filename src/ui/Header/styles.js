@@ -2,12 +2,12 @@ import styled from 'styled-components'
 import theme from '../../styles/theme'
 
 const { breakPoints, wrapper } = theme
-const { gray300, gray400, gray900, green500, white } = theme.colors
+const { primary, border01, gray300, purple500, white } = theme.colors
 const { indexHigher } = theme.zIndex
 
 const Wrapper = styled.header`
-  background: ${gray900};
-  border: 1px solid ${gray400};
+  background: ${primary};
+  border: 1px solid ${border01};
   height: 5rem;
   left: 0;
   position: fixed;
@@ -52,10 +52,10 @@ const Nav = styled.nav`
     }
 
     &.active {
-      color: ${green500};
+      color: ${purple500};
       font-weight: bold;
       &:after {
-        background-color: ${green500};
+        background-color: ${purple500};
         border-radius: 3px 3px 0 0;
         bottom: 1px;
         content: '';
@@ -93,10 +93,10 @@ const NavLink = styled.a`
   }
 
   &.active {
-    color: ${green500};
+    color: ${purple500};
     font-weight: bold;
     &:after {
-      background-color: ${green500};
+      background-color: ${purple500};
       border-radius: 3px 3px 0 0;
       bottom: 1px;
       content: '';
