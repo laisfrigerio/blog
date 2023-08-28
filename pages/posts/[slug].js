@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { PageTitle } from '../../src/components/PageTitle'
-import { Post, PostContent, PostTile, PostSubtitle } from '../../src/components/Posts'
+import { Post, PostContent, PostImage, PostTile, PostSubtitle } from '../../src/components/Posts'
 import { Wrapper } from '../../src/components/Wrapper'
 import { Header } from '../../src/ui/Header'
 import { getPost, getAllPosts } from '../../src/utils/getPosts'
@@ -14,13 +14,16 @@ export default function PostPage({ post }) {
         <Post>
           <PostTile className='title'>{post.title}</PostTile>
           <PostSubtitle className='subtitle'>{post.excerpt}</PostSubtitle>
-          {post.cover && <Image
-            src={`/images/${post.cover}`}
-            width={800}
-            height={400}
-            alt="Banner of the post"
-            priority
-          />}
+          {post.cover && <PostImage>
+              <Image
+                src={`/images/${post.cover}`}
+                // width={"100%"}
+                // height={"auto"}
+                alt="Banner of the post"
+                fill
+                priority
+              />
+            </PostImage>}
           <PostContent dangerouslySetInnerHTML={{ __html: post.content }} />
         </Post>
       </Wrapper>

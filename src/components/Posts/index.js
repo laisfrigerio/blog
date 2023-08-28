@@ -115,4 +115,15 @@ const PostSubtitle = styled.h2`
   line-height: 200%;
 `
 
-export { ListItem, Post, PostContent, PostTile, PostSubtitle }
+const PostImage = styled.div`
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+
+  img {
+    position: relative !important;
+    height: auto !important;
+  }
+`
+
+export { ListItem, Post, PostContent, PostImage, PostTile, PostSubtitle }
