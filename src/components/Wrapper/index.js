@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import theme from '../../styles/theme'
 
 const { fontFamily, wrapper } = theme
-const { gray350, purple500 } = theme.colors
+const { purple500 } = theme.colors
 
 const Wrapper = styled.div`
   align-items: center;
@@ -17,15 +17,6 @@ const Wrapper = styled.div`
     font-family: ${fontFamily.firaCode};
     font-size: 18px;
     margin-bottom: 2rem;
-  }
-
-  .ico {
-    height: 200px;
-    width: 200px;
-
-    path {
-      fill: ${gray350};
-    }
   }
 `
 

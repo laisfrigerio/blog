@@ -7,7 +7,7 @@ const { indexHigher } = theme.zIndex
 
 const Wrapper = styled.header`
   background: ${primary};
-  border: 1px solid ${border01};
+  border-bottom: 1px solid ${border01};
   height: 5rem;
   left: 0;
   position: fixed;
