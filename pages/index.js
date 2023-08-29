@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Link } from '../src/components/Link'
+import { PageTitle } from '../src/components/PageTitle'
 import { Header } from '../src/ui/Header'
 import { 
   HomeWrapper, 
@@ -15,6 +16,7 @@ import {
 export default function HomePage() {
   return (
     <>
+      <PageTitle>Blog | Lais Frigério</PageTitle>
       <Header />
       <HomeWrapper>
         <FeaturedPosts>
