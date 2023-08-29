@@ -1,4 +1,4 @@
-export default {
+const theme = {
   colors: {
     socialMedia: {
       facebook: '#29487d',
@@ -34,7 +34,9 @@ export default {
     roboto: "'Roboto', sans-serif",
   },
   breakPoints: {
+    mediaMax1170: 'screen and (max-width: 1170px)',
     mediaMax992: 'screen and (max-width: 992px)',
+    mediaMax768: 'screen and (max-width: 768px)',
     mediaMax500: 'screen and (max-width: 500px)',
     mediaMax487: 'screen and (max-width: 487px)',
   },
@@ -50,3 +52,5 @@ export default {
   wrapper: '1120px',
   marginBottomDefault: '20px',
 }
+
+export default theme
