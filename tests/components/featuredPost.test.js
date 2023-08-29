@@ -37,6 +37,7 @@ describe('FeaturedPost component', () => {
   it("should render the post link", () => {
     render(<FeaturedPost {...post} />);
     expect(screen.getByRole('link')).toBeInTheDocument();
+    expect(screen.getByRole('link')).toHaveAttribute('target', '_blank');
     expect(screen.getByRole('link')).toHaveAttribute('href', post.href);
   })
 })
