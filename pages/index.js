@@ -17,11 +17,11 @@ export default function HomePage() {
         <FeaturedPosts>
           <FeaturedPostList>
             <FeaturedPost
-              href='/posts/2023-08-29-proxima-parada-instrutura-de-programacao/'
+              href='/posts/2023-08-29-proxima-parada-instrutora-de-programacao/'
               imgSrc='/images/capa-2023-08-29-proxima-parada-instrutura-de-programacao.png'
               imgAlt='Foto em preto e branco de um e-mail encaminhado pela Reprograma com o assunto: "Parabéns! Você foi selecionada para o curso Educa{devas}"'
               date='29/08/2023 às 23:00'
-              title='Próxima parada: instrutura de programação'
+              title='Próxima parada: instrutora de programação'
               subtitle='Muito feliz em compartilhar que fui selecionada para o curso Educa{devas}, oferecido pela {Reprograma}'
             />
 

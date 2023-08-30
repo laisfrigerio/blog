@@ -1,9 +1,9 @@
 ---
 
-title: 'Próxima parada: instrutura de programação'
+title: 'Próxima parada: instrutora de programação'
 date: '2023-08-29 23:00:00'
 excerpt: 'Muito feliz em compartilhar que fui selecionada para o curso Educa{devas}, oferecido pela {Reprograma}'
-cover: capa-2023-08-29-proxima-parada-instrutura-de-programacao.png
+cover: capa-2023-08-29-proxima-parada-instrutora-de-programacao.png
 
 ---
 
