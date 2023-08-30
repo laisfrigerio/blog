@@ -1,5 +1,5 @@
+import Head from 'next/head'
 import Image from 'next/image'
-import { PageTitle } from '../../src/components/PageTitle'
 import { Post, PostContent, PostImage, PostTile, PostSubtitle } from '../../src/components/Posts'
 import { Wrapper } from '../../src/components/Wrapper'
 import { Header } from '../../src/ui/Header'
@@ -8,7 +8,12 @@ import { getPost, getAllPosts } from '../../src/utils/getPosts'
 export default function PostPage({ post }) {
   return (
     <>
-      <PageTitle>{`${post.title} | Blog Lais Frigério`}</PageTitle>
+      <Head>
+        <title>{`${post.title} | Blog Lais Frigério`}</title>
+        <meta key="og:title" property="og:title" content={post.title}></meta>
+        <meta key="og:description" property="og:description" content={post.excerpt}></meta>
+        {post.cover && <meta key="og:image" property="og:image" content={`/images/${post.cover}`} />}
+      </Head>
       <Header active='posts' />
       <Wrapper>
         <Post>
